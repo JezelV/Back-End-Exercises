@@ -1,4 +1,4 @@
-//? Ejercicio 1: Escribir una función que pida un número entero, y verificar si es un número primo
+//! Solución del ejercicio 1: Escribir una función que pida un número entero, y verificar si es un número primo
 
 function esPrimo(numeroUsuario){
     var numeroIncognito = numeroUsuario;
@@ -23,7 +23,7 @@ function esPrimo(numeroUsuario){
 }
 // Fin de la función esPrimo
 
-//? Ejercicio 2: Escribe un programa que calcule el valor aproximado de PI.
+//! Solución del ejercicio 2: Escribe un programa que calcule el valor aproximado de PI.
 
 //? Función para truncar números
 function trunc (x, posiciones = 0) {
@@ -56,9 +56,6 @@ function calcularPI(digitosDePI){
 
     //* Mientras X sea diferente de Y, hacer:
     while(x!==y) { //&& aux<=5000
-        
-        x = calculoDePi.toFixed(limite);
-        x = parseFloat(x);
 
         //? Si la iteración es / no es par:
         if (aux%2!=0){
@@ -67,15 +64,19 @@ function calcularPI(digitosDePI){
 
             //* Restar una fracción a PI
             calculoDePi = calculoDePi - 4/denominador;
+            x = calculoDePi.toFixed(limite);
+            x = parseFloat(x);
             console.log("El valor de PI ahora es: ", x);
-            console.log("¿ Es "+x+" diferente de "+y+" ? ", x!==y);
+            console.log("¿Es "+x+" diferente de "+y+"? - ", x!==y);
         } else {
 
             console.log("Paso "+aux+", se le suma a PI = PI + 4/" + denominador);
             //* Sumar una fracción a PI
             calculoDePi = calculoDePi + 4/denominador;
+            x = calculoDePi.toFixed(limite);
+            x = parseFloat(x);
             console.log("El valor de PI ahora es: ", x);
-            console.log("¿ Es "+x+" diferente de "+y+" ? ", x!==y);
+            console.log("¿Es "+x+" diferente de "+y+"? - ", x!==y);
         }
         //* Se aumenta n+2 y aux+1
         denominador+=2;
@@ -102,7 +103,7 @@ if (seraPrimo) {
 
 //! Ejecución del Ejercicio #2
 
-//* Pedir al usuario el número de dígitos de PI a calcular, y utilizar la función calcularPI() para hacerlo
+//* Pedir al usuario el número de dígitos de PI a calcular, y utiliar la función calcularPI() para hacerlo
 
 var limite = prompt("Ejercicio #2: \nIngresa cuántos dígitos de PI quieres calcular: ");
 var t0 = performance.now(); //? Calcular tiempo de ejecución de la función
