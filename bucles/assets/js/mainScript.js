@@ -1,4 +1,4 @@
-//! Ejercicio 1: Escribir una función que pida un número entero, y verificar si es un número primo
+//? Ejercicio 1: Escribir una función que pida un número entero, y verificar si es un número primo
 
 function esPrimo(numeroUsuario){
     var numeroIncognito = numeroUsuario;
@@ -23,7 +23,7 @@ function esPrimo(numeroUsuario){
 }
 // Fin de la función esPrimo
 
-//! Ejercicio 2: Escribe un programa que calcule el valor aproximado de PI.
+//? Ejercicio 2: Escribe un programa que calcule el valor aproximado de PI.
 
 //? Función para truncar números
 function trunc (x, posiciones = 0) {
@@ -87,18 +87,19 @@ function calcularPI(digitosDePI){
     return x;
 } // Fin de la función calcularPi
 
-//? Ejercicio 3: Dada una secuencia de números terminada en cero, elaborar un algoritmo para calcular el porcentaje y la suma de los números impares, el porcentaje y la suma de los números pares, y la suma de todos los números, y cuántos números fueron ingresados.
+//! Ejercicio 3: Dada una secuencia de números terminada en cero, elaborar un algoritmo para calcular el porcentaje y la suma de los números impares, el porcentaje y la suma de los números pares, y la suma de todos los números, y cuántos números fueron ingresados.
 
 //? Ejecución del Ejercicio #1
 
 //* Pedir un número entero al usuario y verificar si es un número primo mediante la función esPrimo()
-var numeroIncognito = esPrimo(prompt("Ejercicio #1: \nIngresa un número para saber si es un número primo: "))
-if (numeroIncognito) {
-    alert(numeroIncognito + "¡Es un número primo!");
-    console.log(numeroIncognito + "¡Es un número primo!");
+var numeroIngresado = prompt("Ejercicio #1: \nIngresa un número para saber si es un número primo: ");
+var seraPrimo = esPrimo(numeroIngresado);
+if (seraPrimo) {
+    alert(numeroIngresado + " ¡Es un número primo!");
+    console.log(numeroIngresado + " ¡Es un número primo!");
 } else {
-    alert(numeroIncognito + "¡No es un número primo!");
-    console.log(numeroIncognito + "¡No es un número primo!");
+    alert(numeroIngresado + " ¡No es un número primo!");
+    console.log(numeroIngresado + " ¡No es un número primo!");
 }
 
 //? Ejecución del Ejercicio #2
