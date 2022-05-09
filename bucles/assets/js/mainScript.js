@@ -37,13 +37,17 @@ function trunc (x, posiciones = 0) {
 //* Función para calcular los dígitos de PI deseados:
 
 function calcularPI(digitosDePI){
+
+    //? Inicialización de las variables locales utilizadas dentro de la función
     let limite = parseInt(digitosDePI);
     let denominador = 3;
     let numeroDePi = 3.141592653589793;
     let calculoDePi = 4;
-    let aux=1;
+    let aux = 1;
     let x = trunc(calculoDePi, limite);
     let y = trunc(numeroDePi, limite);
+    let ultimoDA = null;
+    let ultimoDP = null;
     y = parseFloat(y);
     x = parseFloat(x);
 
@@ -55,11 +59,13 @@ function calcularPI(digitosDePI){
     console.log(y);
 
     //* Mientras X sea diferente de Y, hacer:
-    while(x!==y) { //&& aux<=5000
+    //! En una futura actualización, mientras el último dígito actual sea diferente al último dígito pasado (ultimoDA !== ultimoDP)
+    do { //&& aux<=5000
 
-        //? Si la iteración es / no es par:
+        //? Dependiendo de, si cada iteración es par/impar, hacer:
         if (aux%2!=0){
 
+            //? Iteraciones impares
             console.log("Paso "+aux+", se le resta a PI = PI - 4/" + denominador);
 
             //* Restar una fracción a PI
@@ -70,7 +76,9 @@ function calcularPI(digitosDePI){
             console.log("¿Es "+x+" diferente de "+y+"? - ", x!==y);
         } else {
 
+            //? Iteraciones pares
             console.log("Paso "+aux+", se le suma a PI = PI + 4/" + denominador);
+
             //* Sumar una fracción a PI
             calculoDePi = calculoDePi + 4/denominador;
             x = calculoDePi.toFixed(limite);
@@ -78,11 +86,12 @@ function calcularPI(digitosDePI){
             console.log("El valor de PI ahora es: ", x);
             console.log("¿Es "+x+" diferente de "+y+"? - ", x!==y);
         }
+
         //* Se aumenta n+2 y aux+1
         denominador+=2;
         aux++;
 
-    } // Fin del bucle while
+    } while (x!==y) // Fin del bucle while
     return x;
 } // Fin de la función calcularPi
 
