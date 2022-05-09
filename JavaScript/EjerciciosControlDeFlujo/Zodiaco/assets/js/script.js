@@ -1,17 +1,17 @@
 
 function signoZodical() {
     
-  //? Pedir el día de nacimiento
+  // Pedir el día de nacimiento
 
     let dia = parseInt(prompt(" Introduce tu dia de nacimiento"));
     
-    //? Pedir el mes de nacimiento
+    // Pedir el mes de nacimiento
 
     let mes = parseInt(prompt("Introduce tu mes de nacimiento en numero"));
 
     if (dia > 0 && mes > 0 && dia <= 31 && mes <= 12) {//Aqui hacemos validacion de datos bien ingresados y evitar errores
 
-      //? Calcular cuál signo es el correcto:
+      // Calcular cuál signo es el correcto:
 
       if ((dia >= 21 && mes == 1) || (dia <= 19 && mes == 2)) alert("Eres Acuario");
       if ((dia >= 20 && mes == 2) || (dia <= 20 && mes == 3)) alert("Eres Piscis");
@@ -27,7 +27,7 @@ function signoZodical() {
       if ((dia >= 22 && mes == 12) || (dia <= 20 && mes == 1)) alert("Eres Capricornio");
     } else {
       
-      //? Mensaje de error
+      // Mensaje de error
 
       alert("¡Error! :( \n\nSolución: Ella no te ama.");
 
@@ -35,6 +35,6 @@ function signoZodical() {
 
   }
 
-  //* Manda a llamar o ejecuta la función que calcula el signo zodiacal.
+  // Manda a llamar o ejecuta la función que calcula el signo zodiacal.
 
   signoZodical();

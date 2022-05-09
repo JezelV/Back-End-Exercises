@@ -1,31 +1,31 @@
-//! Solución del ejercicio 1: Escribir una función que pida un número entero, y verificar si es un número primo
+//? Solución del ejercicio 1: Escribir una función que pida un número entero, y verificar si es un número primo.
 
 function esPrimo(numeroUsuario){
     var numeroIncognito = numeroUsuario;
-    //* Verificar si es primo e imprimirlo
+    // Verificar si es primo e imprimirlo
 
-    //* Casos especiales
+    // Casos especiales
 	if (numeroUsuario == 0 || numeroUsuario == 1 || numeroUsuario == 4){
         return false;
     } else {
         for (let x = 2; x < numeroUsuario / 2; x++) {
             if (numeroUsuario % x == 0){
 
-                //* Si se puede dividir entre éstos números, entonces no es un número primo
+                // Si se puede dividir entre éstos números, entonces no es un número primo
                 return false;
             }
         }
 
-        //* Si no se pudo dividir entre ninguno de los números generados en el for, entonces sí es un número primo
+        // Si no se pudo dividir entre ninguno de los números generados en el for, entonces sí es un número primo
         return true;
     }
     // Fin del if
 }
 // Fin de la función esPrimo
 
-//! Solución del ejercicio 2: Escribe un programa que calcule el valor aproximado de PI.
+//? Solución del ejercicio 2: Escribe un programa que calcule el valor aproximado de PI.
 
-//? Función para truncar números
+// Función para truncar números
 function trunc (x, posiciones = 0) {
     let s = x.toString()
     let l = s.length
@@ -34,11 +34,11 @@ function trunc (x, posiciones = 0) {
     return Number(numStr)
 }
 
-//* Función para calcular los dígitos de PI deseados:
+// Función para calcular los dígitos de PI deseados:
 
 function calcularPI(digitosDePI){
 
-    //? Inicialización de las variables locales utilizadas dentro de la función
+    // Inicialización de las variables locales utilizadas dentro de la función
     let limite = parseInt(digitosDePI);
     let denominador = 3;
     let numeroDePi = 3.141592653589793;
@@ -58,14 +58,14 @@ function calcularPI(digitosDePI){
     console.log("El número de Pi a "+limite+" dígitos es: ");
     console.log(y);
 
-    //* Mientras X sea diferente de Y, hacer:
-    //! En una futura actualización, mientras el último dígito actual sea diferente al último dígito pasado (ultimoDA !== ultimoDP)
+    // Mientras X sea diferente de Y, hacer:
+    //? En una futura actualización, mientras el último dígito actual sea diferente al último dígito pasado (ultimoDA !== ultimoDP)
     do { //&& aux<=5000
 
-        //? Dependiendo de, si cada iteración es par/impar, hacer:
+        // Dependiendo de, si cada iteración es par/impar, hacer:
         if (aux%2!=0){
 
-            //? Iteraciones impares
+            // Iteraciones impares
             console.log("Paso "+aux+", se le resta a PI = PI - 4/" + denominador);
 
             //* Restar una fracción a PI
@@ -76,7 +76,7 @@ function calcularPI(digitosDePI){
             console.log("¿Es "+x+" diferente de "+y+"? - ", x!==y);
         } else {
 
-            //? Iteraciones pares
+            // Iteraciones pares
             console.log("Paso "+aux+", se le suma a PI = PI + 4/" + denominador);
 
             //* Sumar una fracción a PI
@@ -87,7 +87,7 @@ function calcularPI(digitosDePI){
             console.log("¿Es "+x+" diferente de "+y+"? - ", x!==y);
         }
 
-        //* Se aumenta n+2 y aux+1
+        // Se aumenta n+2 y aux+1
         denominador+=2;
         aux++;
 
@@ -95,11 +95,11 @@ function calcularPI(digitosDePI){
     return x;
 } // Fin de la función calcularPi
 
-//? Ejercicio 3: Dada una secuencia de números terminada en cero, elaborar un algoritmo para calcular el porcentaje y la suma de los números impares, el porcentaje y la suma de los números pares, y la suma de todos los números, y cuántos números fueron ingresados.
+// Ejercicio 3: Dada una secuencia de números terminada en cero, elaborar un algoritmo para calcular el porcentaje y la suma de los números impares, el porcentaje y la suma de los números pares, y la suma de todos los números, y cuántos números fueron ingresados.
 
-//! Ejecución del Ejercicio #1
+//? Ejecución del Ejercicio #1
 
-//* Pedir un número entero al usuario y verificar si es un número primo mediante la función esPrimo()
+// Pedir un número entero al usuario y verificar si es un número primo mediante la función esPrimo()
 var numeroIngresado = prompt("Ejercicio #1: \nIngresa un número para saber si es un número primo: ");
 var seraPrimo = esPrimo(numeroIngresado);
 if (seraPrimo) {
@@ -110,9 +110,9 @@ if (seraPrimo) {
     console.log(numeroIngresado + " ¡No es un número primo!");
 }
 
-//! Ejecución del Ejercicio #2
+//? Ejecución del Ejercicio #2
 
-//* Pedir al usuario el número de dígitos de PI a calcular, y utiliar la función calcularPI() para hacerlo
+// Pedir al usuario el número de dígitos de PI a calcular, y utiliar la función calcularPI() para hacerlo
 
 var limite = prompt("Ejercicio #2: \nIngresa cuántos dígitos de PI quieres calcular: ");
 var t0 = performance.now(); //? Calcular tiempo de ejecución de la función
@@ -127,5 +127,5 @@ totalS = trunc(totalS, 4);
 
 alert('Tiempo de ejecución del cálculo: '+totalS +' segundos');
 
-//? Ejecución del Ejercicio #3
+// Ejecución del Ejercicio #3
 
