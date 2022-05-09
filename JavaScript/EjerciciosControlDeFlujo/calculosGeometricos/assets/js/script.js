@@ -1,7 +1,7 @@
 
 var menu = prompt("Ingresa el numero de la figura que deseas calcular su area y perimetro:\n 1. Cuadrado \n 2. Rectangulo \n 3. Circulo \n 4. Triangulo");
 
-    //* Primer menú de selección
+    // Primer menú de selección
 
 switch (menu) {
     case "1":
@@ -12,7 +12,7 @@ switch (menu) {
         alert("El area del cuadrado de lado " + lado + " es de " + area + " unidades cuadradas aprox.");
         break;
 
-        //* Fin del caso 1
+        // Fin del caso 1
 
     case "2":
         let largo = prompt("Ingresa el valor del lado largo (base) del rectángulo");
@@ -23,7 +23,7 @@ switch (menu) {
         alert("El area del rectángulo de base = " + largo + " y altura= " + ancho + " es de " + areaRec + " unidades cuadradas aprox.");
         break;
 
-        //* Fin del caso 2
+        // Fin del caso 2
 
     case "3":
         const pi = 3.1416;
@@ -34,18 +34,18 @@ switch (menu) {
         alert("El area del circulo de radio es de aproximadamente " + radio + " es de: " + areaCi + " unidades cuadradas aprox.");
         break;
 
-        //* Fin del caso 3
+        // Fin del caso 3
 
     case "4":
         let tipoTriangulo = prompt("Elige el tipo de triángulo: \n1. Equilátero (todos sus lados iguales)\n2. Escaleno (todos sus lados diferentes)\n3. Isósceles (base diferente a los lados)");
 
-        //* Segundo menú de selección
-        //* Calcular área y perímetro en base al tipo
+        // Segundo menú de selección
+        // Calcular área y perímetro en base al tipo
 
         switch (tipoTriangulo) {
             case "1":
 
-                //* Pedir datos del triángulo Equilátero
+                // Pedir datos del triángulo Equilátero
                 
                 var base = prompt("Ingrese el valor de algún lado del triángulo");
                 base = Number(base);
@@ -57,7 +57,7 @@ switch (menu) {
 
             case "2":
 
-                //* Pedir datos del triángulo Escaleno
+                // Pedir datos del triángulo Escaleno
 
                 var base = prompt("Ingrese el valor de la base del triángulo");
                 base = Number(base);
@@ -74,7 +74,7 @@ switch (menu) {
                 
             case "3":
 
-                //* Pedir datos del triángulo Isósceles
+                // Pedir datos del triángulo Isósceles
                 
                 var base = prompt("Ingrese el valor de la base del triángulo");
                 base = Number(base);
@@ -99,7 +99,7 @@ switch (menu) {
 
         }
 
-        //*En caso de haber elegido un triángulo correctamente, imprime el área y perímetro elegido.
+        // En caso de haber elegido un triángulo correctamente, imprime el área y perímetro elegido.
 
         if (tipoTriangulo=="1" || tipoTriangulo=="2" || tipoTriangulo=="3") {
             alert("\t\t\t\t\t\t\t\t\t\t\t\t\t ¡PAUM! \t\t\t\t\t\t\t\t\t\t\t\t\t\nÁrea = " + areaTri + " unidades cuadradas aprox.\nPerímetro = " + perimetroTri + " unidades aprox.");
