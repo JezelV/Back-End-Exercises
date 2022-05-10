@@ -1,0 +1,67 @@
+body {
+    background-color: white;
+}
+
+
+button {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+/*Estilos para los botones*/
+.azul {
+    background-color: #1c00f3;
+    color: white;
+}
+
+.rojo {
+    background-color: #f30000;
+    color: white;
+}
+
+.naranja {
+    background-color: #ff8000;
+    color: white;
+}
+
+.negro {
+    background-color: black;
+    color: white;
+}
+
+/*Estilos para mostrar informacion*/
+article {
+    width: 400px;
+    background-color: #fff;
+    padding: 20px 20px 0;
+    font-size: 18px;
+    max-height: 270px;
+    overflow: hidden;
+    transition: max-height 1s;
+    text-align: justify;
+    margin-top: 20px;
+}
+
+p {
+    margin-bottom: 16px;
+}
+
+
+article.abierto {
+    max-height: 1000px;
+}
+
+button {
+    background: #0e0b22;
+    color: #fff;
+    padding: 0.6rem;
+    margin-top: 20px;
+    border: none;
+    border-radius: 3px;
+}
+
+button:hover {
+    cursor: pointer;
+    background: #1e1d25;
+}

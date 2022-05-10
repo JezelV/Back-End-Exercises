@@ -1,0 +1,96 @@
+<!DOCTYPE html> <!-- Nodo-->
+<html lang="en">
+<!--Nodo Documento-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulacion DOM</title>
+    <link rel="stylesheet" href="/manipulacionDOM/assets/css/DOM.css">
+</head>
+
+<body>
+
+
+    <h1>Aviso de bienvenida</h1>
+
+    <h1 id="TituloBienvenida" class="titulos">Hola Generation, estoy aprendiendo a modificar el DOM</h1>
+
+    <h2 id="TituloMasTarde" class="titulos"> Este es otro titulo, que utilizare mas tarde </h2>
+
+    <h3 id="TituloMasTarde2" class="titulos"> Otro titulo </h3>
+
+    <p class="parrafito" id="parrafo1">
+        <!--Nodo del tipo element + atributo asociado al nodo del tipo element-->
+        HOLA A TODXS
+        <!--Nodo del tipo texto-->
+    </p>
+
+    <p class="parrafito" id="parrafo2"> Este es mi segundo parrafo</p>
+
+    <p class="parrafito" id="parrafo3"> Este es mi tercer parrafo</p>
+
+    <!--Este es un bonito comentario-->
+    <!--Nodo-->
+
+    <form>
+        <label>Indicador de cuanto le gustan los chilaquiles verdes a Felipe</label>
+        <input type="text" class="rango">
+    </form>
+
+
+
+
+    <!-- Ejercicio Botones onclick-->
+
+    <!--Creamos un header que cambiara de color-->
+    <h1 class="Header1"> Este texto cambiara de color </h1>
+
+    <!--Creamos un boton con un evento que aplicara el cambio de color-->
+
+    <!--Este evento esta ligado a una funcion para cambiar ese color-->
+    <button onmouseover="cambiarColor('blue')" class="azul">Cambiar azul</button>
+    <button onmouseover="cambiarColor('red')" class="rojo">Cambiar rojo</button>
+    <button onmouseover="cambiarColor('orange')" class="naranja">Cambiar naranja</button>
+    <button onmouseover="cambiarColor('black')" class="negro">Reset</button>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <!--Mostar u ocultar informacion-->
+    <article id="contenido">
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, nostrum molestias. Debitis explicabo nam
+            necessitatibus, ipsam animi, minima possimus rem aliquid porro, vitae fugiat ea aut? Alias impedit quis
+            ullam.
+        </p>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui beatae tenetur reprehenderit natus sequi esse
+            quam
+            cumque deleniti delectus itaque. Quidem adipisci ducimus ab vitae! Voluptatum rerum nemo tempora eius.</p>
+
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat labore explicabo odio esse minima. Fuga
+            voluptatem delectus soluta, obcaecati, sequi sint ipsum debitis eos, itaque voluptates esse corporis autem
+            similique!</p>
+
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat labore explicabo odio esse minima. Fuga
+            voluptatem delectus soluta, obcaecati, sequi sint ipsum debitis eos, itaque voluptates esse corporis autem
+            similique!</p>
+    </article>
+
+
+    <button onclick="mostrarMas()">Mostrar mas</button>
+
+
+
+    <script src="/manipulacionDOM/assets/js/DOM.js"></script>
+</body>
+
+</html>
